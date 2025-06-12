@@ -21,7 +21,7 @@
 
 # --- Configuration ---
 # set the full path to your Vencord directory here, where you cloned to. Example: C:\Users\<user>\Documents\Vencord
-$vencordDir = "C:\Users\CHANGEME"
+$vencordDir = "C:\Users\HyperLexus\Documents\Vencord"
 
 # --- Script ---
 try {
@@ -33,13 +33,13 @@ try {
     }
 
     # cd $vencordDir
-    Write-Host "✅ Navigating to Vencord directory: $vencordDir" -ForegroundColor Green
+    Write-Host "navigating to Vencord directory: $vencordDir" -ForegroundColor Green
     Set-Location -Path $vencordDir
 
     # --- git pull ---
     Write-Host "`n----------------------------------" -ForegroundColor Cyan
     Write-Host "running 'git pull'..." -ForegroundColor Cyan
-    Write-Host "----------------------------------"
+    Write-Host "----------------------------------" -ForegroundColor Cyan
     git pull
 
     # Check the exit code of the last command. 0 means success.
@@ -51,7 +51,7 @@ try {
     # --- Step 2: PNPM Build ---
     Write-Host "`n----------------------------------" -ForegroundColor Cyan
     Write-Host "running 'pnpm build'..." -ForegroundColor Cyan
-    Write-Host "----------------------------------"
+    Write-Host "----------------------------------" -ForegroundColor Cyan
     # if you want to build the dev build (for stuff like patch helper), add --dev to this: 'pnpm build --dev'
     pnpm build
 
@@ -63,7 +63,7 @@ try {
     # --- Step 3: PNPM Inject ---
     Write-Host "`n----------------------------------" -ForegroundColor Cyan
     Write-Host "running 'pnpm inject'..." -ForegroundColor Cyan
-    Write-Host "----------------------------------"
+    Write-Host "----------------------------------" -ForegroundColor Cyan
     Write-Host "will automatically select what you set in the lines below." -ForegroundColor Yellow
     
     # automatically patch stable discord. change this if you want the script to do something else, as mentioned above.
@@ -85,6 +85,6 @@ catch {
 }
 finally {
     # finally its over
-    Write-Host "`n`nscript completed. you may now close the window."
+    Write-Host "`n`nScript finished. You can close this window."
     Read-Host "Press Enter to exit"
 }
