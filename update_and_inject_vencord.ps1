@@ -21,7 +21,7 @@
 
 # --- Configuration ---
 # set the full path to your Vencord directory here, where you cloned to. Example: C:\Users\<user>\Documents\Vencord
-$vencordDir = "C:\Users\HyperLexus\Documents\Vencord"
+$vencordDir = "C:\Users\CHANGEME"
 
 # --- Script ---
 try {
